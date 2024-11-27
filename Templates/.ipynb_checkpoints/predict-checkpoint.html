@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.age.label}}
+        {{form.age}}
+        {% if form.age.errors %}
+            {% for error in form.age.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.height_cm.label}}
+        {{form.height_cm}}
+        {% if form.height_cm.errors %}
+            {% for error in form.height_cm.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.weight_kg.label}}
+        {{form.weight_kg}}
+        {% if form.weight_kg.errors %}
+            {% for error in form.weight_kg.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.waist_cm.label}}
+        {{form.waist_cm}}
+        {% if form.waist_cm.errors %}
+            {% for error in form.waist_cm.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.eyesight_left.label}}
+        {{form.eyesight_left}}
+        {% if form.eyesight_left.errors %}
+            {% for error in form.eyesight_left.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.eyesight_right.label}}
+        {{form.eyesight_right}}
+        {% if form.eyesight_right.errors %}
+            {% for error in form.eyesight_right.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.hearing_left.label}}
+        {{form.hearing_left}}
+        {% if form.hearing_left.errors %}
+            {% for error in form.hearing_left.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.hearing_right.label}}
+        {{form.hearing_right}}
+        {% if form.hearing_right.errors %}
+            {% for error in form.hearing_right.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.systolic.label}}
+        {{form.systolic}}
+        {% if form.systolic.errors %}
+            {% for error in form.systolic.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.relaxation.label}}
+        {{form.relaxation}}
+        {% if form.relaxation.errors %}
+            {% for error in form.relaxation.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.fasting_blood_sugar.label}}
+        {{form.fasting_blood_sugar}}
+        {% if form.fasting_blood_sugar.errors %}
+            {% for error in form.fasting_blood_sugar.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Cholesterol.label}}
+        {{form.Cholesterol}}
+        {% if form.Cholesterol.errors %}
+            {% for error in form.Cholesterol.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.triglyceride.label}}
+        {{form.triglyceride}}
+        {% if form.triglyceride.errors %}
+            {% for error in form.triglyceride.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.HDL.label}}
+        {{form.HDL}}
+        {% if form.HDL.errors %}
+            {% for error in form.HDL.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.LDL.label}}
+        {{form.LDL}}
+        {% if form.LDL.errors %}
+            {% for error in form.LDL.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.hemoglobin.label}}
+        {{form.hemoglobin}}
+        {% if form.hemoglobin.errors %}
+            {% for error in form.hemoglobin.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Urine_protein.label}}
+        {{form.Urine_protein}}
+        {% if form.Urine_protein.errors %}
+            {% for error in form.Urine_protein.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.serum_creatinine.label}}
+        {{form.serum_creatinine}}
+        {% if form.serum_creatinine.errors %}
+            {% for error in form.serum_creatinine.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.AST.label}}
+        {{form.AST}}
+        {% if form.AST.errors %}
+            {% for error in form.AST.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.ALT.label}}
+        {{form.ALT}}
+        {% if form.ALT.errors %}
+            {% for error in form.ALT.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Gtp.label}}
+        {{form.Gtp}}
+        {% if form.Gtp.errors %}
+            {% for error in form.Gtp.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.dental_caries.label}}
+        {{form.dental_caries}}
+        {% if form.dental_caries.errors %}
+            {% for error in form.dental_caries.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{form.submit()}}</div>
+    <br>
+    <div>
+        {{output}}
+    </div>
+    <div>
+        <p>REDIRECT TO HOMEPAGE? <a href="{{url_for('home')}}">HOME</a></p>
+    </div>
+</form>
+
+
+{% endblock content %}

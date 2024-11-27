@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Header Section with Background Image -->
+    <header class="hero">
+        <style>
+        .hero {
+            background-image: url('{{ url_for('static', filename='img/header-bg.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        </style>
+        <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+            <h1 style="padding: 50px;">A smart AI tool for<br>better farming and <span style="color: #ffc107;">Healthier </span>crops</h1>
+            <a href="{{ url_for('home') }}" class="btn" style="margin-top: 20px; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 1.2rem; transition: background-color 0.3s ease;">Discover More</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Here's What We Offer</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/22.jpg') }}" alt="Crop Recommendation">
+                <h3>Crop recommendation</h3>
+                <p>Provides tailored recommendations for the most suitable crops based on regional conditions like soil quality and climate.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Fertilizer Recommendation">
+                <h3>Fertilizer recommendation</h3>
+                <p>Analyzes soil health and crop needs to suggest precise fertilizer applications, boosting crop productivity.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/image 2.jpg') }}" alt="Crops Damage Predictor">
+                <h3>Crops damage predictor</h3>
+                <p>Predicts potential causes of crop damage, helping farmers mitigate risks and protect their crops from preventable factors.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/image 3.jpg') }}" alt="Plant Disease Predictor">
+                <h3>Plant disease predictor</h3>
+                <p>Uses image classification to identify potential diseases in crops, enabling early intervention.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

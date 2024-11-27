@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background-image: url('../img/header-bg.jpg'); /* Path to the background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a transparent overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero h1 span {
+    color: #ffc107; /* Highlighted text color */
+}
+
+.hero .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #218838;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}

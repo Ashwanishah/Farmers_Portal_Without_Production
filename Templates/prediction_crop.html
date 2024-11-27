@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4"><i class="fas fa-seedling text-success"></i> Crop Recommendation Form</h2>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+                <label for="N" class="form-label">
+                    <i class="fas fa-leaf"></i> {{ form.N.label }}
+                </label>
+                {{ form.N(class="form-control") }}
+                {% if form.N.errors %}
+                    {% for error in form.N.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="P" class="form-label">
+                    <i class="fas fa-vial"></i> {{ form.P.label }}
+                </label>
+                {{ form.P(class="form-control") }}
+                {% if form.P.errors %}
+                    {% for error in form.P.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="K" class="form-label">
+                    <i class="fas fa-atom"></i> {{ form.K.label }}
+                </label>
+                {{ form.K(class="form-control") }}
+                {% if form.K.errors %}
+                    {% for error in form.K.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="temperature" class="form-label">
+                    <i class="fas fa-temperature-high"></i> {{ form.temperature.label }}
+                </label>
+                {{ form.temperature(class="form-control") }}
+                {% if form.temperature.errors %}
+                    {% for error in form.temperature.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="humidity" class="form-label">
+                    <i class="fas fa-water"></i> {{ form.humidity.label }}
+                </label>
+                {{ form.humidity(class="form-control") }}
+                {% if form.humidity.errors %}
+                    {% for error in form.humidity.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="ph" class="form-label">
+                    <i class="fas fa-flask"></i> {{ form.ph.label }}
+                </label>
+                {{ form.ph(class="form-control") }}
+                {% if form.ph.errors %}
+                    {% for error in form.ph.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="rainfall" class="form-label">
+                    <i class="fas fa-cloud-rain"></i> {{ form.rainfall.label }}
+                </label>
+                {{ form.rainfall(class="form-control") }}
+                {% if form.rainfall.errors %}
+                    {% for error in form.rainfall.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="text-center mt-4">
+                {{ form.submit(class="btn btn-success btn-lg") }}
+            </div>
+
+            <div class="mt-3 text-center">
+                {{ output }}
+            </div>
+
+            <div class="text-center mt-3">
+                <p><i class="fas fa-arrow-left"></i> <a href="{{ url_for('home') }}">Back to Home</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 10px;
+    }
+    .form-label {
+        font-weight: bold;
+    }
+    .btn:hover {
+        background-color: #28a745;
+        color: white;
+    }
+</style>
+
+{% endblock content %}
